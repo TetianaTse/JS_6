@@ -1,15 +1,9 @@
-function getNum() {
+function getNum(text) {
+    let num;
     do {
-        num = parseInt(prompt('Enter the number to be raised to the power:'));
+        num = parseInt(prompt(text));
     } while (num <= 0 || isNaN(num));
     return num;
-}
-
-function getDegree() {
-    do {
-        degree = parseInt(prompt('Enter the power of a number:'));
-    } while (degree <= 0 || isNaN(degree));
-    return degree;
 }
 
 function pow(num, degree) {
@@ -20,8 +14,8 @@ function pow(num, degree) {
 }
 
 function count() {
-    let num = getNum();
-    let degree = getDegree();
+    let num = getNum('Enter the number to be raised to the power:');
+    let degree = getNum('Enter the power of a number:');
     return pow(num, degree);
 }
 
